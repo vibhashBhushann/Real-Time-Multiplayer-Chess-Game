@@ -1,0 +1,145 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #232323; /* Equivalent to bg-zinc-900 */
+}
+
+/* Center the chessboard container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Chessboard Styles */
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 equal columns */
+    grid-template-rows: repeat(8, 1fr);    /* 8 equal rows */
+    width: 400px; /* Size of the chessboard */
+    height: 400px; /* Size of the chessboard */
+    border: 2px solid #333; /* Optional border for the chessboard */
+    transform: rotate(0deg); /* No rotation initially */
+    margin: 20px auto; /* Center the board in the container */
+}
+
+/* Square Styling */
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Light square (used for alternating squares) */
+.square.light {
+    background-color: #f0d9b5; /* Light square color */
+}
+
+/* Dark square (used for alternating squares) */
+.square.dark {
+    background-color: #b58863; /* Dark square color */
+}
+
+/* Piece Styling */
+.piece {
+    font-size: 36px; /* Size of the chess piece */
+    cursor: pointer; /* Pointer cursor when hovering over pieces */
+    transition: transform 0.2s ease; /* Smooth transform on drag */
+}
+
+/* White piece */
+.piece.white {
+    color: white;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 1)); /* Shadow effect for white pieces */
+}
+
+/* Black piece */
+.piece.black {
+    color: black;
+}
+
+/* Make pieces draggable */
+.piece.draggable {
+    cursor: grab;
+}
+
+/* When a piece is being dragged */
+.dragging {
+    opacity: 0.5; /* Transparency when dragging */
+}
+
+/* Flip the board */
+.flipped {
+    transform: rotate(180deg); /* Flip the entire board */
+}
+
+/* Rotate pieces for the black player */
+.flipped .piece {
+    transform: rotate(180deg); /* Rotate black pieces to face the correct way */
+}
+
+/* Optional: Style for dragging effect or board state (e.g., valid move highlight) */
+.highlight {
+    background-color: rgba(255, 255, 0, 0.3); /* Highlight possible valid moves or squares */
+}
+
+/* Optional: Highlight squares for valid moves */
+.square.highlight {
+    border: 2px solid #ffcc00; /* Add a border to highlight squares */
+}
+
+/* Dragging effect on piece */
+.piece.dragging {
+    transform: scale(1.1); /* Slightly scale the piece during drag */
+    z-index: 10; /* Ensure the dragged piece is above others */
+}
+
+/* ADD THESE STYLES FOR GAME INFO */
+#game-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.player-info {
+    text-align: center;
+}
+
+.player-info .role {
+    display: block;
+    font-weight: bold;
+}
+
+.player-info .status {
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+#game-status {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffcc00; /* A gold color for emphasis */
+}
+
+#user-role {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
