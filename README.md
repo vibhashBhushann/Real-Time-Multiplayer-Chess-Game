@@ -106,12 +106,6 @@ Contributions are what make the open source community such an amazing place to l
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
-
-Project Link: [https://github.com/your-username/your-repo-name](https://github.com/your-username/your-repo-name)
-
 ## Acknowledgments
 
 - [chess.js](https://github.com/jhlywa/chess.js) - Chess move validation and game state management
